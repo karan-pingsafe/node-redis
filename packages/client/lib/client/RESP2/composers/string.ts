@@ -7,7 +7,12 @@ export default class StringComposer implements Composer<string> {
     private string = '';
 
     write(buffer: Buffer): void {
-        this.string += this.decoder.write(buffer);
+        try {
+            this.string += this.decoder.write(buffer);
+        } catch (e) {
+            console.log("Buffer exceeded as", buffer)
+            throw new Error("Node Buffer exceeded")
+        }
     }
 
     end(buffer: Buffer): string {
