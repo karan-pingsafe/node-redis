@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@redis/bloom": "1.2.0",
-    "@redis/client": "1.5.11",
+    "@redis/client": "https://gitpkg.now.sh/karan-pingsafe/node-redis/packages/client?master",
     "@redis/graph": "1.1.0",
     "@redis/json": "1.0.6",
     "@redis/search": "1.1.5",
