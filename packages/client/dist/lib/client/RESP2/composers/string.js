@@ -21,7 +21,7 @@ class StringComposer {
             this.string += this.decoder.write(buffer);
         }
         catch (e) {
-            console.log("Buffer exceeded as", buffer);
+            console.log("Buffer exceeded as", buffer.toString('utf8'));
             throw new Error("Node Buffer exceeded");
         }
     }
